@@ -1,0 +1,54 @@
+
+#mainHeader{
+   background:url('../images/theme-pics/header-line.png') repeat-x bottom #fff ;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.54);
+}
+
+#mainMenu .navbar-nav li.last{border-bottom:none !important;}
+
+.navbar-nav > li > a > i, .navbar-default .navbar-nav > li > a {color:#aaa;}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, #resMainMenu li.active>a {
+	color:#ea761e;
+}
+
+.navbar-nav > li.sep:before{color:#eee;}
+
+.navbar-default .navbar-nav > li > a.active {
+	color:#fff;
+	background:#ea761e;
+	border-bottom: 4px solid #cd691b
+}
+
+.navbar-nav ul li a {color:#999;}
+
+.navbar-nav li.hover>a {color:#ea761e;}
+
+/*** mega menu ***/
+.nekoMegaMenu {background:#fff;}
+
+.navbar-nav .nekoMegaMenu ul {box-shadow:none;}
+
+.navbar-nav .nekoMegaMenu {box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);}
+
+
+/*** MEDIA QUERIES ***/
+
+@media(max-width:767px){}
+
+@media(min-width:768px){
+	.navbar-nav ul {
+		background:#fff;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.navbar-nav ul li a:hover, .navbar-nav ul li.hover>a {background:#eee;}
+
+	#mainMenu .navbar-nav li {border-bottom:none;}
+	
+	#mainMenu .navbar-nav ul li a {border-bottom:1px solid #eee;}
+}
+
+@media(min-width:992px){}
+
+@media(min-width:1200px){}

@@ -1,0 +1,126 @@
+.navbar-default {background:none; border:none;}
+
+.text11{
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+.navbar-nav ul {
+	display:none;
+	padding: 0;
+	margin: 0;
+	list-style-type:none;
+}
+
+@media(min-width:768px){
+
+	.navbar-header{ float:none; text-align: center;}
+	.navbar-nav > li > a{
+		font-size: 13px;
+		letter-spacing: 0.05em;
+		font-weight: 700;
+		padding: 22px;
+		line-height:44px;
+		vertical-align:middle;
+		text-transform: uppercase;
+	}
+	.navbar-brand{
+		float: none;
+		padding: 25px 0 0 0;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.navbar-nav > li > a i {
+		display: block;
+	}
+
+	.navbar-nav ul {
+		position: absolute;
+		top: 90px;
+		left: 0;
+		z-index: 1024;
+	}
+
+	.navbar-nav ul {
+		width: 160px;
+	}
+
+	
+	.navbar-nav > li.sep{display: block;}
+
+	.navbar-nav > li.sep:before{
+		content:' ';
+		display:block;
+		font-size: 10px;
+		text-align: center;
+		padding: 0;
+		margin-top: 22px;
+		margin-bottom: 22px;
+		line-height:44px;*/
+	}
+
+	#mainMenu .navbar-nav li a.hasSubMenu:after{
+		display: none;
+	}
+
+	#mainMenu .navbar-nav ul li a.hasSubMenu:after {
+		content: '\e805';
+		display: block;
+	}
+
+
+	.navbar-nav ul li a{padding:11px;display:block; font-size:12px;}
+	.navbar-nav ul li{padding:0;}
+
+
+	.nav>li.nekoMegaMenuTrigger{position:static !important;}
+
+	.navbar-nav .nekoMegaMenu ul{
+		position: static;
+		float: left;
+		border:none;
+		background:none;
+		display:block;
+		width:100%;
+
+	}
+
+	#mainMenu .navbar-nav ul li.megaMenuTitle {
+		display:block;
+		width:100%;
+	}
+	
+	.navbar-nav .nekoMegaMenu{
+		width:100%;
+		position:absolute;
+		right:0;
+		top: 150px;
+		z-index: 1024;
+		padding:10px;
+
+	}
+
+	.navbar-nav .nekoMegaMenu ul {padding:0;}
+	.navbar-nav .nekoMegaMenu ul li a {padding:5px 10px 5px 10px;}
+	.megaInner {padding:22px;}
+
+
+}
+
+@media(min-width:992px){
+	.navbar-nav .nekoMegaMenu{
+		top: 90px;
+	}
+	.navbar-nav.pull-right {
+		float: right !important;
+	}
+	.navbar-header{ float:left;}
+	.navbar-brand{
+		float: left;
+		padding: 33px 0;
+	}
+
+
+}
+

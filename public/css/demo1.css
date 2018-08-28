@@ -1,0 +1,82 @@
+a:link{
+	text-decoration-line: none;
+	text-decoration: none; 
+}
+a:active{
+	text-decoration-line: none;
+	text-decoration: none; 
+}
+a:visited {
+	text-decoration-line: none;
+	text-decoration: none; 
+}
+a:hover{
+	text-decoration-line: none;
+	text-decoration: none; 
+}
+a{
+	text-decoration-line: none;
+	text-decoration: none; 
+}
+.text{
+	text-align: left;
+	color: #bcb9b9;
+}
+.table1{
+	display: block;
+	overflow: auto;
+}
+.table2{
+	display: none;
+	overflow: auto;
+}
+.btn2{
+	background: #5cb85c;
+	border-radius: 4px;
+	border: none;
+	color: #ffffff;
+	font-size: 16px;
+	margin-top: 20px;
+	height:34px;
+	width:100%;
+}
+.login{
+	text-align: center;
+	color: #bcb9b9;
+	float:left;
+	float:right;
+}
+.entry{
+	text-align: center;
+	color: #bcb9b9;
+	float:left;
+	/*border-right: 1px solid #bcb9b9;*/
+	float:left;
+}
+.cross{
+	font-size: 30px;
+	float:right;
+	padding-right: 15px;
+}
+.black_overlay{ 
+    display: none; 
+    position: absolute; 
+    top: 0%; 
+    left: 0%; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index:1001; 
+    -moz-opacity: 0.8; 
+    opacity:.60; 
+    filter: alpha(opacity=88); 
+} 
+.white_content { 
+    display: none; 
+    position: absolute; 
+    padding: 5 10 10 10px;  
+    background-color: white;
+    z-index:1002; 
+    overflow: auto;
+    /*align-items: center; */
+} 
