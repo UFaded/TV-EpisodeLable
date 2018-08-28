@@ -29,10 +29,11 @@
             <div class="box box-border">
                 <div class="box-body">
                     <h4>注册</h4>
-                    <form>
+                    <?php echo validation_errors(); ?>
+                    <form action="<?php echo site_url('UserController/register');?>" method="post">
                         <div class="form-group">
                             <label>用户名</label>
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="username" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>邮  箱</label>
@@ -47,7 +48,7 @@
                             <input type="password" name="password" class="form-control">
                         </div>
                         <div class="form-group text-right">
-                            <button class="btn btn-orange btn-block" style="color:white;">Register</button>
+                            <button class="btn btn-orange btn-block" style="color:white;" type="submit">注册</button>
                         </div>
                         <div class="form-group text-center">
                             <span class="text-muted">已经有账号?</span> <a href="/index.php/UserController/tologin">登录</a>

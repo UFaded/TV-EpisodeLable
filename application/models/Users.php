@@ -18,4 +18,13 @@ class Users extends CI_Model
         $query = $this->db->query($sql,array($username));
         return $query->row_array();//返回结果
     }
+    public function register()
+    {
+        $data = array(
+            'username' => $this->input->post('username'),
+            'email' => $this->input->post('email'),
+            'password' => $this->input->post('password')
+        );
+        return $this->db->insert('test.users',$data);
+    }
 }
