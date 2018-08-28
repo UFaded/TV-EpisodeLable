@@ -50,7 +50,7 @@
                             <button class="btn btn-orange btn-block" style="color:white;">Register</button>
                         </div>
                         <div class="form-group text-center">
-                            <span class="text-muted">已经有账号?</span> <a href="/index.php/UserController/login">登录</a>
+                            <span class="text-muted">已经有账号?</span> <a href="/index.php/UserController/tologin">登录</a>
                         </div>
                     </form>
                 </div>

@@ -22,7 +22,8 @@
             <div class="box box-border">
                 <div class="box-body">
                     <h4>登录</h4>
-                    <form>
+                    <?php echo validation_errors(); ?>
+                    <form action="<?php echo site_url('UserController/login'); ?>" method="post">
                         <div class="form-group">
                             <label>用户名</label>
                             <input type="text" name="username" class="form-control" value="">
@@ -34,16 +35,17 @@
                             <input type="password" name="password" class="form-control">
                         </div>
                         <div class="form-group text-right">
-                            <button class="btn btn-orange btn-block" style="color:white;">Login</button>
+                            <button class="btn btn-orange btn-block" style="color:white;" type="submit">Login</button>
                         </div>
                         <div class="form-group text-center">
-                            <span class="text-muted">没有账号?</span> <a href="/index.php/UserController/register">注册</a>
+                            <span class="text-muted">没有账号?</span> <a href="/index.php/UserController/toregister">注册</a>
                         </div>
                         <div class="title-line">
                             or
                         </div>
                         <a href="" class="btn btn-social btn-block facebook"> 返回上一页</a>
                     </form>
+
                 </div>
             </div>
         </div>

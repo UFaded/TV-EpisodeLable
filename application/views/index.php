@@ -31,7 +31,7 @@
                 <h1 class="wow bounceInDown rotate">TV</h1>
                 <!-- <h2 class="wow bounce">DESIGN STUDIO</h2> -->
                 <h2 class="wow bounce">EPISODE LABLE</h2>
-                <a class="btn btn-default smoothScroll"  href="/index.php/UserController/login">GET STARTED</a></div>
+                <a class="btn btn-default smoothScroll"  href="/index.php/UserController/tologin">GET STARTED</a></div>
         </div>
     </div>
 </section>
