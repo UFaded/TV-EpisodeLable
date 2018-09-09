@@ -78,7 +78,7 @@
 
 
                             <li class="primary dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名&nbsp;<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $username?><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                                 </ul>

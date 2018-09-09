@@ -200,7 +200,6 @@ $config['directory_trigger'] = 'd';
 |
 */
 $config['allow_get_array'] = TRUE;
-
 /*
 |--------------------------------------------------------------------------
 | Error Logging Threshold
