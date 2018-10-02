@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Magz is a HTML5 & CSS3 magazine template is based on Bootstrap 3.">
-
-    <meta name="keyword" content="magz, html5, css3, template, magazine template">
-
-    <title>Magz &mdash; Responsive HTML5 &amp; CSS3 Magazine Template</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
-    <link rel="stylesheet" href="../../../public/css/style1.css">
-</head>
-
-<body>
 
 <div class="login first grey" style="padding-top: 50px;">
     <div class="container">
@@ -50,6 +33,3 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>

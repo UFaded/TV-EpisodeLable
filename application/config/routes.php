@@ -50,6 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['default_controller']='demo/index';//con.php中的view方法
+$route['default_controller']='demo/index';
 $route['login/(:any)']='Login/index';
 

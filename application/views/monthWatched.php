@@ -18,17 +18,17 @@
 
     <title>Magz &mdash; Responsive HTML5 &amp; CSS3 Magazine Template</title>
     <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="../../../public/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
 
     <!-- IonIcons -->
-    <link rel="stylesheet" href="../../../public/js/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../public/js/ionicons/css/ionicons.min.css">
     <!-- Custom style -->
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 
     <!-- Custom css -->
-    <link type="text/css" rel="stylesheet" href="../../../public/css/layout1.css">
-    <link type="text/css" id="colors" rel="stylesheet" href="../../../public/css/orange1.css">
-    <script type="text/javascript" src="../../../public/bootstrap/js/bootstrap.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../public/css/layout1.css">
+    <link type="text/css" id="colors" rel="stylesheet" href="../../public/css/orange1.css">
+    <script type="text/javascript" src="../../public/bootstrap/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -48,20 +48,20 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <!-- Logo -->
-                            <a class="navbar-brand" href="../index.php" style="font-size: 30px;font-weight: bold;">TV EPISODE LABLE</a>
+                            <a class="navbar-brand" href="index.php" style="font-size: 30px;font-weight: bold;">TV EPISODE LABLE</a>
                         </div>
                         <div class="collapse navbar-collapse" id="mainMenu">
                             <!-- Main navigation -->
                             <ul class="nav navbar-nav pull-right">
                                 <!--当前热播-->
                                 <li class="primary">
-                                    <a href="../current/currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
+                                    <a href="currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
                                 </li>
                                 <li class="sep"></li>
 
                                 <!--查找剧集-->
                                 <li class="primary">
-                                    <a href="../search/search.php" class="firstLevel hasSubMenu">查找剧集</a>
+                                    <a href="search.php" class="firstLevel hasSubMenu">查找剧集</a>
                                 </li>
                                 <li class="sep"></li>
 
@@ -73,7 +73,7 @@
 
                                 <!--个人收藏-->
                                 <li class="primary">
-                                    <a href="../userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                    <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
                                 </li>
                                 <li class="sep"></li>
 
@@ -116,7 +116,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img01.jpg">
+                                    <img src="../../public/images/news/img01.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -146,7 +146,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img11.jpg">
+                                    <img src="../../public/images/news/img11.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -176,7 +176,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img08.jpg">
+                                    <img src="../../public/images/news/img08.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -206,7 +206,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img13.jpg">
+                                    <img src="../../public/images/news/img13.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -236,7 +236,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img15.jpg">
+                                    <img src="../../public/images/news/img15.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -266,7 +266,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img03.jpg">
+                                    <img src="../../public/images/news/img03.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -296,7 +296,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img15.jpg">
+                                    <img src="../../public/images/news/img15.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -326,7 +326,7 @@
                         <div class="inner">
                             <figure>
                                 <a href="single.html">
-                                    <img src="../../../public/images/news/img16.jpg">
+                                    <img src="../../public/images/news/img16.jpg">
                                 </a>
                             </figure>
                             <div class="details">
@@ -375,16 +375,16 @@
 <!-- JS -->
 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
 <!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
-<script src="../../../public/js/jquery.migrate.js"></script>
-<script src="../../../public/js/bootstrap/bootstrap.min.js"></script>
+<script src="../../public/js/jquery.migrate.js"></script>
+<script src="../../public/js/bootstrap/bootstrap.min.js"></script>
 <script>var $target_end=$(".best-of-the-week");</script>
-<script src="../../../public/js/jquery-number/jquery.number.min.js"></script>
-<script src="../../../public/js/owlcarousel/dist/owl.carousel.min.js"></script>
-<script src="../../../public/js/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-<script src="../../../public/js/easescroll/jquery.easeScroll.js"></script>
-<script src="../../../public/js/sweetalert/dist/sweetalert.min.js"></script>
-<script src="../../../public/js/toast/jquery.toast.min.js"></script>
+<script src="../../public/js/jquery-number/jquery.number.min.js"></script>
+<script src="../../public/js/owlcarousel/dist/owl.carousel.min.js"></script>
+<script src="../../public/js/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+<script src="../../public/js/easescroll/jquery.easeScroll.js"></script>
+<script src="../../public/js/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../../public/js/toast/jquery.toast.min.js"></script>
 <!-- <script src="js/demo.js"></script> -->
-<script src="../../../public/js/e-magz.js"></script>
+<script src="../../public/js/e-magz.js"></script>
 </body>
 </html>

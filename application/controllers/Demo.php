@@ -16,6 +16,8 @@ class Demo extends CI_Controller
     public function index()
     {
         $this->load->library('parser');
-        $this->load->view('index');
+        $this->load->view('header_home');
+        $this->load->view('homePage');
+        $this->load->view('footer_home');
     }
 }

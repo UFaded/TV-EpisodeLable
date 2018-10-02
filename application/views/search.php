@@ -18,13 +18,13 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Bootstrap  -->
-    <link type="text/css" rel="stylesheet" href="../../../public/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
     <!-- Custom css -->
-    <link type="text/css" rel="stylesheet" href="../../../public/css/layout.css">
-    <link type="text/css" id="colors" rel="stylesheet" href="../../../public/css/orange.css">
+    <link type="text/css" rel="stylesheet" href="../../public/css/layout.css">
+    <link type="text/css" id="colors" rel="stylesheet" href="../../public/css/orange.css">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     <!-- icon fonts -->
-    <link type="text/css" rel="stylesheet" href="../../../public/css/custom-icons.css">
+    <link type="text/css" rel="stylesheet" href="../../public/css/custom-icons.css">
 
     <link rel="apple-touch-icon" sizes="114x114" href="../../../public/images/apple-touch-icon-114x114.png">
 
@@ -47,7 +47,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <!-- Logo -->
-                        <a class="navbar-brand" href="../index.php" style="font-size: 30px;font-weight: bolder;">TV EPISODE LABLE</a>
+                        <a class="navbar-brand" href="index.php" style="font-size: 30px;font-weight: bolder;">TV EPISODE LABLE</a>
                     </div>
                     <div class="collapse navbar-collapse" id="mainMenu">
                         <!-- Main navigation -->
@@ -55,7 +55,7 @@
                         <ul class="nav navbar-nav pull-right">
                             <!--当前热播-->
                             <li class="primary">
-                                <a href="../current/currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
+                                <a href="currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
                             </li>
                             <li class="sep"></li>
 
@@ -67,13 +67,13 @@
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="../months/monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="../userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -127,7 +127,7 @@
 
 </div>
 
-<script type="text/javascript" src="../../../public/js/jquery/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="../../../public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../public/js/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../public/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

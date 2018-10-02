@@ -18,13 +18,13 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Bootstrap  -->
-    <link type="text/css" rel="stylesheet" href="../../../public/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
     <!-- Custom css -->
-    <link type="text/css" rel="stylesheet" href="../../../public/css/layout.css">
-    <link type="text/css" id="colors" rel="stylesheet" href="../../../public/css/orange.css">
+    <link type="text/css" rel="stylesheet" href="../../public/css/layout.css">
+    <link type="text/css" id="colors" rel="stylesheet" href="../../public/css/orange.css">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     <!-- icon fonts -->
-    <link type="text/css" rel="stylesheet" href="../../../public/css/custom-icons.css">
+    <link type="text/css" rel="stylesheet" href="../../public/css/custom-icons.css">
 
 </head>
 <body class="activateAppearAnimation">
@@ -43,7 +43,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <!-- Logo -->
-                        <a class="navbar-brand" href="../index.php" style="font-size: 30px;font-weight: bolder;">TV EPISODE LABLE</a>
+                        <a class="navbar-brand" href="index.php" style="font-size: 30px;font-weight: bolder;">TV EPISODE LABLE</a>
                     </div>
                     <div class="collapse navbar-collapse" id="mainMenu">
                         <!-- Main navigation -->
@@ -51,25 +51,25 @@
                         <ul class="nav navbar-nav pull-right">
                             <!--当前热播-->
                             <li class="primary">
-                                <a href="../current/currentHot.php" class="firstLevel active hasSubMenu">当前热播</a>
+                                <a href="currentHot.php" class="firstLevel active hasSubMenu">当前热播</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--查找剧集-->
                             <li class="primary">
-                                <a href="../search/search.php" class="firstLevel hasSubMenu">查找剧集</a>
+                                <a href="search.php" class="firstLevel hasSubMenu">查找剧集</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="../months/monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="../userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -149,7 +149,7 @@
                         <article class="post clearfix">
                             <div class="row">
                                 <div class="postMeta col-sm-3 col-xs-3" style="height: 200px;overflow: hidden;">
-                                    <img src="../../../public/images/drama1.jpg" style="height: 220px;overflow: hidden">
+                                    <img src="../../public/images/drama1.jpg" style="height: 220px;overflow: hidden">
                                 </div>
                                 <section class="col-sm-9 col-xs-9" style="height: 220px">
                                     <div class="row">
@@ -190,7 +190,7 @@
                         <section id="team2" class="mt15">
                             <div class="row mb30" style="height: 110px">
                                 <div class="col-xs-3" style="height:110px;overflow: hidden;">
-                                    <img src="../../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
                                 <div class="col-xs-7" style="height: 110px;">
                                     <div class="row" style="height: 80px">
@@ -212,7 +212,7 @@
                             </div>
                             <div class="row mb30">
                                 <div class="col-xs-3" style="height:100px;overflow: hidden;">
-                                    <img src="../../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
                                 <div class="col-xs-9">
                                     <h4 style="font-weight: bold;">第二集 &nbsp;&nbsp; 一动不动是王八</h4>
@@ -222,7 +222,7 @@
                             </div>
                             <div class="row mb30">
                                 <div class="col-xs-3" style="height:100px;overflow: hidden;">
-                                    <img src="../../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
                                 <div class="col-xs-9">
                                     <h4 style="font-weight: bold;">第三集 &nbsp;&nbsp; 一动不动是王八</h4>
@@ -238,7 +238,7 @@
                         <div class="row">
                             <div class="" style="width: 70%;overflow: hidden;margin-left: 30px">
                                 <div class="" style="height: 180px;overflow: hidden;">
-                                    <a href=""><img src="../../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 13px;font-weight: bold;padding-top: 2px;text-align: center">
                                     <p><a href="">纸牌屋</a></p>
@@ -247,7 +247,7 @@
 
                             <div class="" style="width: 70%;overflow: hidden;margin-left: 30px">
                                 <div class="" style="height: 180px;overflow: hidden;">
-                                    <a href=""><img src="../../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 13px;font-weight: bold;padding-top: 2px;text-align: center">
                                     <p><a href="">纸牌屋</a></p>
@@ -256,7 +256,7 @@
 
                             <div class="" style="width: 70%;overflow: hidden;margin-left: 30px">
                                 <div class="" style="height: 180px;overflow: hidden;">
-                                    <a href=""><img src="../../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 13px;font-weight: bold;padding-top: 2px;text-align: center">
                                     <p><a href="">纸牌屋</a></p>
@@ -276,7 +276,7 @@
 
 </div>
 
-<script type="text/javascript" src="../../../public/js/jquery/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="../../../public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../public/js/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../public/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

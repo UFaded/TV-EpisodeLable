@@ -10,7 +10,7 @@ class UserController extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->config('config',true);
+        $this->load->config('config', true);
         $this->load->helper('url');//加载辅助函数
         $this->load->model('users');//加载数据库模型
         $this->load->library('session');
@@ -19,35 +19,18 @@ class UserController extends CI_Controller
     public function tologin()
     {
         $this->load->library('form_validation');//表单显示
-        $this->load->view('user/login');
+        $this->load->view('header');
+        $this->load->view('login');
+        $this->load->view('footer');
 
     }
-    public function login()
-    {
-        $data['username'] = $this->input->post('username');
-        $data['password'] = $this->input->post('password');
-        //表单获取数据
-        $data['user_item'] = $this->users->login($data['username']);
-        //获取数据库密码
-        $data['getpassword'] = $data['user_item']['password'];
-        if($data['password'] == $data['getpassword'] && $data['password']!=null)
-        {
-            $user = array('username' => $data['username'],
-                          'password' => $data['password']
-            );
-            $this->session->set_userdata('user',$user);
-            $this->load->view('current/currentHot',$user);//数据匹配成功，用户登录。
-        }
-        else
-        {
-            $this->load->view('fail');
-        }
 
-    }
     public function toregister()
     {
         $this->load->library('form_validation');//表单显示
-        $this->load->view('user/register');
+        $this->load->view('header');
+        $this->load->view('register');
+        $this->load->view('footer');
     }
 
     public function register()
@@ -56,24 +39,41 @@ class UserController extends CI_Controller
         $this->load->view('success');
     }
 
-    //验证码
-    public function getcode()
+    public function ajaxRegister()
     {
-        $this->load->library('captha_new');
-        $code = $this->captha_new->getCaptcha();
-        $this->session->set_userdata('code', $code);
-        $this->captha_new->showImg();
+        $this->load->model('Users');
+        $u_name = $this->load->escape($this->load->post('u_name',true));
+        $u_phone = $this->load->escape($this->load->post('u_phone',true));
+        $u_passwd = $this->load->escape($this->load->post('u_passwd',true));
+        $u_passwd = substr($u_passwd,1,-2);
+        //截取密码片段
+        //$u_name and $u_phone都不可能为空
+
+        $u_passwd = md5($u_passwd);
+
+        $result = $this->Users->register($u_name,$u_phone,$u_passwd);
+        if ($result!=null)
+        {
+            if($result == "phone number already exists")
+            {
+                echo "Password duplicated";
+            }
+            else
+            {
+                $u_data = array(
+                    'u_id' =>$result['u_id'],
+                    'u_name' =>$result['u_name'],
+                    'u_phone' =>$result['u_phone'],
+                    'u_passwd' =>$result['u_passwd'],
+                );
+
+                $this->session->set_userdata($u_data);
+                echo "Insert the success";
+            }
+        }
+        else {
+            echo "Insert the failure";
+        }
     }
 
-    //session应用测试
-//    public function test()
-//    {
-//        $user = array(
-//            'name' => 'you',
-//            'age' => '18'
-//        );
-//        $this->session->set_userdata('user',$user);
-//        $user2 = $this->session->userdata('user');
-//        $this->load->view('user/test',$user2);
-//    }
 }

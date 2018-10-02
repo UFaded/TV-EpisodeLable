@@ -8,14 +8,14 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!-- STYLESHEET CSS FILES -->
-    <link rel="stylesheet" href="../../public/css/style1.css">
-    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../public/css/animate.min.css">
-    <link rel="stylesheet" href="../../public/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../public/css/nivo-lightbox.css">
-    <link rel="stylesheet" href="../../public/css/nivo_themes/default/default.css">
-    <link rel="stylesheet" href="../../public/css/templatemo-style.css">
-    <link rel="stylesheet" href="../../public/css/demo1.css">
+    <link rel="stylesheet" href="/public/css/style1.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/animate.min.css">
+    <link rel="stylesheet" href="/public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="/public/css/nivo_themes/default/default.css">
+    <link rel="stylesheet" href="/public/css/templatemo-style.css">
+    <link rel="stylesheet" href="/public/css/demo1.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 <!-- preloader section -->
@@ -135,13 +135,13 @@
     </div>
 </footer>
 <!-- JAVASCRIPT JS FILES -->
-<script src="../../public/js/jquery1.js"></script>
-<script src="../../public/js/bootstrap.min.js"></script>
-<script src="../../public/js/nivo-lightbox.min.js"></script>
-<script src="../../public/js/smoothscroll.js"></script>
-<script src="../../public/js/jquery.sticky.js"></script>
-<script src="../../public/js/jquery.parallax.js"></script>
-<script src="../../public/js/wow.min.js"></script>
-<script src="../../public/js/custom.js"></script>
+<script src="/public/js/jquery1.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+<script src="/public/js/nivo-lightbox.min.js"></script>
+<script src="/public/js/smoothscroll.js"></script>
+<script src="/public/js/jquery.sticky.js"></script>
+<script src="/public/js/jquery.parallax.js"></script>
+<script src="/public/js/wow.min.js"></script>
+<script src="/public/js/custom.js"></script>
 </body>
 </html>
