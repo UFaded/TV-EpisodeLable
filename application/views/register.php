@@ -6,9 +6,9 @@
                 <div class="box-body">
                     <h4>注册</h4>
                     <?php echo validation_errors(); ?>
-                    <form action="<?php echo site_url('UserController/ajaxRegister');?>" method="GET" onsubmit="return register()">
+                    <form action="/index.php/UserController/toCurrentHot" method="GET" onsubmit="return register()">
                         <div class="form-group">
-                            <label for="inputPhone">手机号</label>
+                            <label for="inputPhone">手机号码</label>
                             <input type="text" id="inputPhone" name="inputPhone" class="form-control" placeholder="请输入您的手机号" required>
                         </div>
                         <div class="form-group">

@@ -55,25 +55,25 @@
                             <ul class="nav navbar-nav pull-right">
                                 <!--当前热播-->
                                 <li class="primary">
-                                    <a href="currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
+                                    <a href="/index.php/UserController/toCurrentHot" class="firstLevel hasSubMenu">当前热播</a>
                                 </li>
                                 <li class="sep"></li>
 
                                 <!--查找剧集-->
                                 <li class="primary">
-                                    <a href="search.php" class="firstLevel hasSubMenu">查找剧集</a>
+                                    <a href="/index.php/UserController/toSearch" class="firstLevel hasSubMenu">查找剧集</a>
                                 </li>
                                 <li class="sep"></li>
 
                                 <!--本月观看-->
                                 <li class="primary">
-                                    <a href="monthWatched.php" class="firstLevel hasSubMenu active">本月观看</a>
+                                    <a href="/index.php/UserController/tomonthWatched" class="firstLevel active hasSubMenu">本月观看</a>
                                 </li>
                                 <li class="sep"></li>
 
                                 <!--个人收藏-->
                                 <li class="primary">
-                                    <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                    <a href="" class="firstLevel hasSubMenu">个人收藏</a>
                                 </li>
                                 <li class="sep"></li>
 
@@ -81,7 +81,7 @@
                                 <li class="primary dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名&nbsp;<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                        <li><a href="/index.php/UserController/tologin">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                                     </ul>
                                 </li>
 

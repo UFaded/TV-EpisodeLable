@@ -6,16 +6,16 @@
                 <div class="box-body">
                     <h4>登录</h4>
                     <?php echo validation_errors(); ?>
-                    <form action="<?php echo site_url('UserController/login'); ?>" method="post">
+                    <form action="/index.php/UserController/toCurrentHot" method="GET" onsubmit="return login()">
                         <div class="form-group">
-                            <label>用户名</label>
-                            <input type="text" name="username" class="form-control" value="" placeholder="请输入用户名">
+                            <label>手机号码</label>
+                            <input type="text" name="inputPhone" id="inputPhone" class="form-control" value="" placeholder="请输入手机号码" required>
                         </div>
                         <div class="form-group">
                             <label class="fw">密码
                                 <a href="" class="pull-right">忘记密码?</a>
                             </label>
-                            <input type="password" name="password" class="form-control" placeholder="请输入密码">
+                            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="请输入密码" required>
                         </div>
                         <div class="form-group text-right">
                             <button class="btn btn-orange btn-block" style="color:white;" type="submit">登录</button>

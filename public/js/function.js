@@ -25,7 +25,7 @@ function register()
         return false;
     }
 
-    if(pwd.length <6)
+    if(pwd.length <6 || pwd.length>16)
     {
         toastr.warning("密码不符合规范","警告");
         document.getElementById("inputPassword").focus();
@@ -85,4 +85,57 @@ function register()
         }
     });
     return flag;//返回值很重要
+}
+
+function login()
+{
+    var flag = false;
+    var phoneNumber = document.getElementById('inputPhone').valueOf();
+    var pwd = document.getElementById('inputPassword').valueOf();
+
+    var regPwd = new RegExp("^\\w*$");
+    var regPh = new RegExp("^\\d{11,}$");
+
+    data = {
+        'u_phone':phoneNumber,
+        'u_passwd':pwd
+    };
+
+    $.ajax({
+        type: 'POST',
+        url:'/index.php/UserController/ajaxLogin',
+        data:data,
+        async:false,
+        error: function(XMLHttpRequest, textStatus, errorThrown)
+        {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+            toastr.error("网络错误", "错误");
+        },
+        success:function (result) {
+            if(result == "Login successful")
+            {
+                toastr.success("登录成功","信息");
+                flag = true;
+            }
+            else if(result == "Wrong phone number")
+            {
+                toastr.error("手机号码或密码错误","错误");
+                flag = false;
+            }
+            else
+            {
+                toastr.info(result,"DEBUG");
+                toastr.error("参数错误","错误");
+                flag = false;
+            }
+        }
+    });
+    return flag;
+}
+
+function search()
+{
+    return true;
 }

@@ -33,18 +33,14 @@ class UserController extends CI_Controller
         $this->load->view('footer');
     }
 
-    public function register()
-    {
-        $this->users->register();
-        $this->load->view('success');
-    }
-
     public function ajaxRegister()
     {
         $this->load->model('Users');
-        $u_name = $this->load->escape($this->load->post('u_name',true));
-        $u_phone = $this->load->escape($this->load->post('u_phone',true));
-        $u_passwd = $this->load->escape($this->load->post('u_passwd',true));
+
+        $u_name = $_POST['u_name'];
+        $u_phone = $_POST['u_phone'];
+        $u_passwd = $_POST['u_passwd'];
+
         $u_passwd = substr($u_passwd,1,-2);
         //截取密码片段
         //$u_name and $u_phone都不可能为空
@@ -64,7 +60,7 @@ class UserController extends CI_Controller
                     'u_id' =>$result['u_id'],
                     'u_name' =>$result['u_name'],
                     'u_phone' =>$result['u_phone'],
-                    'u_passwd' =>$result['u_passwd'],
+                    'u_token' => $result['u_token']
                 );
 
                 $this->session->set_userdata($u_data);
@@ -76,4 +72,50 @@ class UserController extends CI_Controller
         }
     }
 
+    public function ajaxLogin()
+    {
+        $this->load->model('Users');
+        $u_phone = $_POST['u_phone'];
+        $u_passwd = $_POST['u_passwd'];
+
+        $u_passwd = substr($u_passwd,1,-2);
+
+        $u_passwd = $u_passwd = md5($u_passwd);
+
+        $result = $this->Users->login($u_phone,$u_passwd);
+        if($result !=null)
+        {
+            $u_data = array(
+                'u_id' => $result['u_id'],
+                'u_name' =>$result['u_name'],
+                'u_phone' =>$result['u_phone'],
+                'u_token' => $result['u_token']
+            );
+            $this->session->set_userdata($u_data);
+            echo "Login successful";
+        }
+        else{
+            echo "Wrong phone number";
+        }
+    }
+    public function toCurrentHot()
+    {
+        $data['u_name'] = $this->session->userdata('u_name');
+        $this->load->view('currentHot',$data);
+    }
+
+    public function toEpisodeIntro()
+    {
+        $this->load->view('EpisodeIntro');
+    }
+
+    public function toSearch()
+    {
+        $this->load->view('search');
+    }
+
+    public function tomonthWatched()
+    {
+        $this->load->view('monthWatched');
+    }
 }

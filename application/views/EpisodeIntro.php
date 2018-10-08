@@ -51,25 +51,25 @@
                         <ul class="nav navbar-nav pull-right">
                             <!--当前热播-->
                             <li class="primary">
-                                <a href="currentHot.php" class="firstLevel active hasSubMenu">当前热播</a>
+                                <a href="/index.php/UserController/toCurrentHot" class="firstLevel active hasSubMenu">当前热播</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--查找剧集-->
                             <li class="primary">
-                                <a href="search.php" class="firstLevel hasSubMenu">查找剧集</a>
+                                <a href="/index.php/UserController/toSearch" class="firstLevel hasSubMenu">查找剧集</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="/index.php/UserController/tomonthWatched" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -77,7 +77,7 @@
                             <li class="primary dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名&nbsp;<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                    <li><a href="/index.php/UserController/tologin">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                                 </ul>
                             </li>
 
@@ -100,7 +100,7 @@
                         <ul class="breadcrumb visible-md visible-lg">
                             <li><a href="">主页</a></li>
                             <li><a href="">当前热播</a></li>
-                            <li class="active">权利的游戏第一季</li>
+                            <li class="active">西部世界第二季</li>
                         </ul>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-4">
                                     <h4 style="font-weight: bold;">剧集总数</h4>
-                                    <p>NUMBER</p>
+                                    <p>10</p>
                                 </div>
                                 <div class="col-md-12 col-sm-4">
                                     <h4 style="font-weight: bold;">播出时间</h4>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="col-md-12 col-sm-4">
                                     <h4 style="font-weight: bold;">收藏人数</h4>
-                                    <p>NUMBER</p>
+                                    <p>31</p>
                                 </div>
                             </div>
                         </section>
@@ -133,11 +133,9 @@
                                 <aside id="sidebar">
                                     <nav id="subnav">
                                         <ul>
-                                            <li><a class="active" href="#">第一季<i class=" icon-right-open-mini"></i></a></li>
-                                            <li><a href="#">第二季<i class=" icon-right-open-mini"></i></a></li>
-                                            <li><a href="#">第三季<i class=" icon-right-open-mini"></i></a></li>
-                                            <li><a href="#">第四季<i class=" icon-right-open-mini"></i></a></li>
-                                            <li><a href="#">第五季<i class=" icon-right-open-mini"></i></a></li>
+                                            <li><a href="#">第一季<i class=" icon-right-open-mini"></i></a></li>
+                                            <li><a class="active" href="#">第二季<i class=" icon-right-open-mini"></i></a></li>
+
                                         </ul>
                                     </nav>
                                 </aside>
@@ -149,11 +147,11 @@
                         <article class="post clearfix">
                             <div class="row">
                                 <div class="postMeta col-sm-3 col-xs-3" style="height: 200px;overflow: hidden;">
-                                    <img src="../../public/images/drama1.jpg" style="height: 220px;overflow: hidden">
+                                    <img src="../../public/images/drama5.jpg" style="height: 220px;overflow: hidden">
                                 </div>
                                 <section class="col-sm-9 col-xs-9" style="height: 220px">
                                     <div class="row">
-                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="font-size: 22px;margin-bottom: 20px"><a href="#">权利的游戏第一季</a>&nbsp;（<a href="">2017</a>)</div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="font-size: 22px;margin-bottom: 20px"><a href="#">西部世界第二季</a>&nbsp;（<a href="">2017</a>)</div>
                                         <ul class="col-lg-4 col-md-4 col-sm-4 col-sm-4 entry-meta">
                                             <li class="entry-date"><a href="#"><i class="icon-heart-empty iconSmall"></i>&nbsp;加入收藏</a></li>
                                         </ul>
@@ -178,7 +176,7 @@
                                         </div>
                                     </div>
 
-                                    <p class="list-limit" style="height: 45px;text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;">简介：《权力的游戏》（Game of Thrones），是美国HBO电视网制作推出的一部中世纪史诗奇幻题材的电视剧。该剧改编自美国作家乔治·R·R·马丁的奇幻小说《冰与火之歌》系列。由戴维·贝尼奥夫、D·B·威斯、艾伦·泰勒等人执导，大卫·贝尼奥夫和D·B·威斯编剧。由戴维·贝尼奥夫、D·B·威斯、艾伦·泰勒等人执导，大卫·贝尼奥夫和D·B·威斯编剧。
+                                    <p class="list-limit" style="height: 45px;text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;">该剧讲述的是四个宅男科学家和一个美女邻居发生的搞笑生活故事。2014年4月下旬《生活大爆炸》政策原因搜狐视频无法播放下架。2015年7月22日，《生活大爆炸》第八季拿到许可证上线搜狐视频。2009年8月，该剧赢得了电视评论协会（TCA）最佳喜剧系列奖。2017年9月18日，获得第69届艾美奖最佳喜剧多镜头剪辑奖。
                                     </p>
                                     <a href="#" class="readMore">查看详情</a>
 
@@ -190,45 +188,91 @@
                         <section id="team2" class="mt15">
                             <div class="row mb30" style="height: 110px">
                                 <div class="col-xs-3" style="height:110px;overflow: hidden;">
-                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                                    <img src="/public/images/e1.jpg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
                                 <div class="col-xs-7" style="height: 110px;">
                                     <div class="row" style="height: 80px">
-                                        <h4 style="font-weight: bold;margin-left: ">第一集 &nbsp;&nbsp; 一动不动是王八</h4>
+                                        <h4 style="font-weight: bold;margin-left: ">第一集</h4>
                                         <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
                                         </p>
                                     </div>
                                     <div class="row" style="height: 30px;margin-top: 9px">
                                         <ul class="entry-meta" style="">
                                             <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月1日</a></li>
-                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;看过：524</a></li>
-                                            &nbsp;&nbsp;&nbsp;
+                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
+                                            <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-xs-2" style="padding-top: 35px;height: 110px;padding-left: 25px;opacity: 0.4">
-                                    <button style=""><i class="icon-eye iconMedium"></i></button>
-                                </div>
+<!--                                <div class="col-xs-2" style="padding-top: 35px;height: 110px;padding-left: 25px;opacity: 0.4">-->
+<!--                                    <button style=""><i class="icon-eye iconMedium"></i></button>-->
+<!--                                </div>-->
                             </div>
-                            <div class="row mb30">
-                                <div class="col-xs-3" style="height:100px;overflow: hidden;">
-                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                            <div class="row mb30" style="height: 110px">
+                                <div class="col-xs-3" style="height:110px;overflow: hidden;">
+                                    <img src="/public/images/e2.jpg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
-                                <div class="col-xs-9">
-                                    <h4 style="font-weight: bold;">第二集 &nbsp;&nbsp; 一动不动是王八</h4>
-                                    <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
-                                    </p>
+                                <div class="col-xs-7" style="height: 110px;">
+                                    <div class="row" style="height: 80px">
+                                        <h4 style="font-weight: bold;margin-left: ">第二集</h4>
+                                        <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
+                                        </p>
+                                    </div>
+                                    <div class="row" style="height: 30px;margin-top: 9px">
+                                        <ul class="entry-meta" style="">
+                                            <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月8日</a></li>
+                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
+                                            <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <!--                                <div class="col-xs-2" style="padding-top: 35px;height: 110px;padding-left: 25px;opacity: 0.4">-->
+                                <!--                                    <button style=""><i class="icon-eye iconMedium"></i></button>-->
+                                <!--                                </div>-->
                             </div>
-                            <div class="row mb30">
-                                <div class="col-xs-3" style="height:100px;overflow: hidden;">
-                                    <img src="../../public/images/me.jpeg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                            <div class="row mb30" style="height: 110px">
+                                <div class="col-xs-3" style="height:110px;overflow: hidden;">
+                                    <img src="/public/images/e3.jpg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
                                 </div>
-                                <div class="col-xs-9">
-                                    <h4 style="font-weight: bold;">第三集 &nbsp;&nbsp; 一动不动是王八</h4>
-                                    <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
-                                    </p>
+                                <div class="col-xs-7" style="height: 110px;">
+                                    <div class="row" style="height: 80px">
+                                        <h4 style="font-weight: bold;margin-left: ">第三集</h4>
+                                        <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
+                                        </p>
+                                    </div>
+                                    <div class="row" style="height: 30px;margin-top: 9px">
+                                        <ul class="entry-meta" style="">
+                                            <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月15日</a></li>
+                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
+                                            <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <!--                                <div class="col-xs-2" style="padding-top: 35px;height: 110px;padding-left: 25px;opacity: 0.4">-->
+                                <!--                                    <button style=""><i class="icon-eye iconMedium"></i></button>-->
+                                <!--                                </div>-->
+                            </div>
+                            <div class="row mb30" style="height: 110px">
+                                <div class="col-xs-3" style="height:110px;overflow: hidden;">
+                                    <img src="/public/images/e4.jpg" class="img-responsive imgBorder" alt="SEATTLE website template" style="width: 100%">
+                                </div>
+                                <div class="col-xs-7" style="height: 110px;">
+                                    <div class="row" style="height: 80px">
+                                        <h4 style="font-weight: bold;margin-left: ">第四集</h4>
+                                        <p>This did not seem to encourage the witness at all: he kept shifting from one foot to the other. It's my pleasure to meet you here.
+                                        </p>
+                                    </div>
+                                    <div class="row" style="height: 30px;margin-top: 9px">
+                                        <ul class="entry-meta" style="">
+                                            <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月22日</a></li>
+                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
+                                            <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--                                <div class="col-xs-2" style="padding-top: 35px;height: 110px;padding-left: 25px;opacity: 0.4">-->
+                                <!--                                    <button style=""><i class="icon-eye iconMedium"></i></button>-->
+                                <!--                                </div>-->
                             </div>
 
                         </section>
@@ -247,19 +291,19 @@
 
                             <div class="" style="width: 70%;overflow: hidden;margin-left: 30px">
                                 <div class="" style="height: 180px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="../../public/images/drama4.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 13px;font-weight: bold;padding-top: 2px;text-align: center">
-                                    <p><a href="">纸牌屋</a></p>
+                                    <p><a href="">吸血鬼日记 第一季</a></p>
                                 </div>
                             </div>
 
                             <div class="" style="width: 70%;overflow: hidden;margin-left: 30px">
                                 <div class="" style="height: 180px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="../../public/images/drama5.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 13px;font-weight: bold;padding-top: 2px;text-align: center">
-                                    <p><a href="">纸牌屋</a></p>
+                                    <p><a href="">西部世界 第二季</a></p>
                                 </div>
                             </div>
 

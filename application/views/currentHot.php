@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: sonata
- * Date: 2018/8/26
- * Time: 下午10:14
- */?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,33 +43,33 @@
                         <ul class="nav navbar-nav pull-right">
                             <!--当前热播-->
                             <li class="primary">
-                                <a href="currentHot.php" class="firstLevel active hasSubMenu">当前热播</a>
+                                <a href="/index.php/UserController/toCurrentHot" class="firstLevel active hasSubMenu">当前热播</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--查找剧集-->
                             <li class="primary">
-                                <a href="search.php" class="firstLevel hasSubMenu">查找剧集</a>
+                                <a href="/index.php/UserController/toSearch" class="firstLevel hasSubMenu">查找剧集</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="/index.php/UserController/tomonthWatched" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
 
                             <li class="primary dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $username?><span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $u_name;?><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                    <li><a href="/index.php/UserController/tologin">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                                 </ul>
                             </li>
 
@@ -145,16 +137,16 @@
                         <div class="row" style="margin-bottom: 20px">
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href="EpisodeIntro.php"><img src="../../public/images/drama1.jpg" style="width: 100%"></a>
+                                    <a href="/index.php/UserController/toEpisodeIntro"><img src="/public/images/drama1.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
-                                    <p><a href="EpisodeIntro.php">生活大爆炸 第三季</a></p>
+                                    <p><a href="/index.php/UserController/toEpisodeIntro">生活大爆炸 第五季</a></p>
                                 </div>
                             </div>
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama2.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama2.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
                                     <p><a href="">权利的游戏 第一季</a></p>
@@ -163,7 +155,7 @@
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama3.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
                                     <p><a href="">纸牌屋</a></p>
@@ -173,7 +165,7 @@
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama4.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama4.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
                                     <p><a href="">吸血鬼日记 第二季</a></p>
@@ -184,43 +176,41 @@
                         <div class="row" style="margin-bottom: 20px">
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama1.jpg" style="width: 100%"></a>
+                                    <a href="/index.php/UserController/toEpisodeIntro"><img src="/public/images/drama5.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
-                                    <p><a href="">生活大爆炸 第三季</a></p>
+                                    <p><a href="/index.php/UserController/toEpisodeIntro">西部世界 第二季</a></p>
                                 </div>
                             </div>
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama2.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama6.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
-                                    <p><a href="">权利的游戏 第一季</a></p>
+                                    <p><a href="">初代吸血鬼 第一季</a></p>
                                 </div>
                             </div>
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama3.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama7.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
-                                    <p><a href="">纸牌屋</a></p>
+                                    <p><a href="">破产姐妹 第二季</a></p>
                                 </div>
                             </div>
 
 
                             <div class="col-md-3" style="height: 280px;overflow: hidden;width: 25%;float: left">
                                 <div class="" style="height: 250px;overflow: hidden;">
-                                    <a href=""><img src="../../public/images/drama4.jpg" style="width: 100%"></a>
+                                    <a href=""><img src="/public/images/drama8.jpg" style="width: 100%"></a>
                                 </div>
                                 <div class="" style="height: 30px;font-size: 15px;font-weight: bold;padding-top: 8px;text-align: center">
-                                    <p><a href="">吸血鬼日记 第二季</a></p>
+                                    <p><a href="">神盾局特工 第五季</a></p>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

@@ -14,22 +14,16 @@
 
     <meta name="description" content="SEATTLE is a One Page Bootstrap 3 Premium website Template, using nice Paralax effect, HTML5, CSS3 and Twitter Bootstrap 3">
     <meta name="author" content="Little NEKO">
-    <!-- Mobile Specific Metas
-    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Bootstrap  -->
     <link type="text/css" rel="stylesheet" href="../../public/bootstrap/css/bootstrap.min.css">
-    <!-- Custom css -->
+    <script src="/public/js/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="../../public/css/layout.css">
     <link type="text/css" id="colors" rel="stylesheet" href="../../public/css/orange.css">
-    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-    <!-- icon fonts -->
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <link type="text/css" rel="stylesheet" href="../../public/css/custom-icons.css">
-
-    <link rel="apple-touch-icon" sizes="114x114" href="../../../public/images/apple-touch-icon-114x114.png">
-
-
-
+    <?php
+    echo "<script type='text/javascript' src='../../public/js/function.js'></script>";
+    ?>
 </head>
 <body class="activateAppearAnimation">
 <div id="globalWrapper" >
@@ -55,25 +49,25 @@
                         <ul class="nav navbar-nav pull-right">
                             <!--当前热播-->
                             <li class="primary">
-                                <a href="currentHot.php" class="firstLevel hasSubMenu">当前热播</a>
+                                <a href="/index.php/UserController/toCurrentHot" class="firstLevel hasSubMenu">当前热播</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--查找剧集-->
                             <li class="primary">
-                                <a href="search.php" class="firstLevel active hasSubMenu">查找剧集</a>
+                                <a href="/index.php/UserController/toSearch" class="firstLevel hasSubMenu active">查找剧集</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="monthWatched.php" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="/index.php/UserController/tomonthWatched" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="userCenter/index.php" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -81,7 +75,7 @@
                             <li class="primary dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名&nbsp;<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                    <li><a href="/index.php/UserController/tologin">登出<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                                 </ul>
                             </li>
 
@@ -112,12 +106,12 @@
 
         <section id="content" class="mt30 mb30">
             <div class="container">
-                <form class="form-inline" role="form">
+                <form class="form-inline" role="form" action="/index.php/UserController/toEpisodeIntro" method="GET" onsubmit="return search()">
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control lg" placeholder="Search…">
                         <span class="input-group-btn">
-										<button type="submit" class="btn btn-sm">Submit</button>
-								</span>
+                            <button type="submit" class="btn btn-sm">搜索</button>
+						</span>
                     </div>
                 </form>
             </div>
