@@ -12,10 +12,10 @@
     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <script src="/public/js/jquery.min.js"></script>
     <link rel="stylesheet" href="/public/css/style1.css">
-    <link rel="stylesheet" href="../../public/toastr/toastr.css">
-    <script type="text/javascript" src="../../public/toastr/toastr.js"></script>
+    <link rel="stylesheet" href="/public/toastr/toastr.css">
+    <script type="text/javascript" src="/public/toastr/toastr.js"></script>
     <?php
-    echo "<script type='text/javascript' src='../../public/js/function.js'></script>";
+    echo "<script type='text/javascript' src='/public/js/function.js'></script>";
     ?>
 </head>
 <body>

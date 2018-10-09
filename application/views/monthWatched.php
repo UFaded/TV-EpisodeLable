@@ -67,13 +67,13 @@
 
                                 <!--本月观看-->
                                 <li class="primary">
-                                    <a href="/index.php/UserController/tomonthWatched" class="firstLevel active hasSubMenu">本月观看</a>
+                                    <a href="/index.php/News/detail" class="firstLevel active hasSubMenu">本月观看</a>
                                 </li>
                                 <li class="sep"></li>
 
                                 <!--个人收藏-->
                                 <li class="primary">
-                                    <a href="" class="firstLevel hasSubMenu">个人收藏</a>
+                                    <a href="/index.php/News/collect" class="firstLevel hasSubMenu">个人收藏</a>
                                 </li>
                                 <li class="sep"></li>
 

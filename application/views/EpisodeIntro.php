@@ -63,13 +63,13 @@
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="/index.php/UserController/tomonthWatched" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="/index.php/News/detail" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="/index.php/News/collect" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -147,7 +147,7 @@
                         <article class="post clearfix">
                             <div class="row">
                                 <div class="postMeta col-sm-3 col-xs-3" style="height: 200px;overflow: hidden;">
-                                    <img src="../../public/images/drama5.jpg" style="height: 220px;overflow: hidden">
+                                    <img src="/public/images/drama5.jpg" style="height: 220px;overflow: hidden">
                                 </div>
                                 <section class="col-sm-9 col-xs-9" style="height: 220px">
                                     <div class="row">
@@ -199,7 +199,6 @@
                                     <div class="row" style="height: 30px;margin-top: 9px">
                                         <ul class="entry-meta" style="">
                                             <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月1日</a></li>
-                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
                                             <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
                                         </ul>
                                     </div>
@@ -221,7 +220,7 @@
                                     <div class="row" style="height: 30px;margin-top: 9px">
                                         <ul class="entry-meta" style="">
                                             <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月8日</a></li>
-                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
+<!--                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>-->
                                             <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
                                         </ul>
                                     </div>
@@ -243,7 +242,6 @@
                                     <div class="row" style="height: 30px;margin-top: 9px">
                                         <ul class="entry-meta" style="">
                                             <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月15日</a></li>
-                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
                                             <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
                                         </ul>
                                     </div>
@@ -265,7 +263,6 @@
                                     <div class="row" style="height: 30px;margin-top: 9px">
                                         <ul class="entry-meta" style="">
                                             <li class="entry-date"><a href="#"><i class="icon-upload"></i>&nbsp;更新时间: 2017年8月22日</a></li>
-                                            <li class="entry-category"><a href="#"><i class="icon-youtube-play iconSmall "></i>&nbsp;已看人数：524</a></li>
                                             <li class="entry-haveseen"><a href="#"><i class="icon-eye iconSmall"></i>我看过</a> </li>
                                         </ul>
                                     </div>

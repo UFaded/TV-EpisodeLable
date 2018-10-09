@@ -55,13 +55,13 @@
 
                             <!--本月观看-->
                             <li class="primary">
-                                <a href="/index.php/UserController/tomonthWatched" class="firstLevel hasSubMenu">本月观看</a>
+                                <a href="/index.php/News/detail" class="firstLevel hasSubMenu">本月观看</a>
                             </li>
                             <li class="sep"></li>
 
                             <!--个人收藏-->
                             <li class="primary">
-                                <a href="" class="firstLevel hasSubMenu">个人收藏</a>
+                                <a href="/index.php/News/collect" class="firstLevel hasSubMenu">个人收藏</a>
                             </li>
                             <li class="sep"></li>
 
@@ -105,7 +105,7 @@
                         <section class="widget">
                             <h3>猜你喜欢</h3>
                             <ul class="list-unstyled iconList">
-                                <li><a href="#">初代吸血鬼5</a></li>
+                                <li><a href="/index.php/UserController/toEpisodeIntro">西部世界第二季</a></li>
                                 <li><a href="#">教父</a></li>
                                 <li><a href="#">纸牌屋</a></li>
                                 <li><a href="#">权利的游戏3</a></li>
@@ -120,11 +120,13 @@
                         <section class="widget">
                             <h3>更新时间</h3>
                             <ul class="list-unstyled iconList">
-                                <li><a href="#">2018年4月</a></li>
-                                <li><a href="#">2018年5月</a></li>
-                                <li><a href="#">2018年6月</a></li>
-                                <li><a href="#">2018年7月</a></li>
-
+                                <li><a href="#">2018年10月10日</a></li>
+                                <li><a href="#">2018年10月9日</a></li>
+                                <li><a href="#">2018年10月8日</a></li>
+                                <li><a href="#">2018年10月7日</a></li>
+                                <li><a href="#">2018年10月6日</a></li>
+                                <li><a href="#">2018年10月5日</a></li>
+                                <li><a href="#">2018年10月4日</a></li>
                                 <div class="more" style="margin-top: 30px;text-align: center">
                                     <a href=""><span class="">查看更多</span></a>
                                 </div>
