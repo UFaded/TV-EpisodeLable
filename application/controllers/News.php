@@ -151,10 +151,10 @@ class News extends CI_Controller {
 
     //猜我喜欢的更多界面（根据收藏前5）
     public function guess(){
-        $data['guessEpisodes'] = $this->news_model->guess();
+        $data['guessEpisodes'] = $this->news_model->guess(2);//后面参数为用户id
         //在数组内加入是否用户收藏相应的剧
         foreach ($data['guessEpisodes'] as &$item) {
-            $item['collect'] = $this->news_model->judgeCollect($item['s_id'],2);
+            $item['collect'] = $this->news_model->judgeCollect($item['s_id'],2);//后面参数为用户id
         }
         $this->load->view('guess',$data);
 

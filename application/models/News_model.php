@@ -89,9 +89,9 @@ class News_model extends CI_Model {
     }
 
     //猜我喜欢
-    public function guess()
+    public function guess($u_id)
     {
-        $rs = $this->db->query("SELECT * FROM subscribe JOIN shows on shows.s_id=subscribe.s_id GROUP BY subscribe.s_id ORDER BY COUNT(*) DESC limit 0,5")->result_array();
+        $rs = $this->db->query("SELECT * FROM subscribe JOIN shows on shows.s_id=subscribe.s_id WHERE shows.s_id NOT in (SELECT s_id from subscribe WHERE u_id={$u_id}) GROUP BY subscribe.s_id ORDER BY COUNT(*) DESC limit 0,5")->result_array();
         return $rs;
     }
 }
