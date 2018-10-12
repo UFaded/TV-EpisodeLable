@@ -27,32 +27,13 @@
 			a:active{text-decoration:none;}/* 指正在点的链接*/ 
   		</style>
   		<script>
-  			function show(x){
-  				data = {
-					'page':x
-				};
-  				$.ajax({
-        			type: 'POST',
-        			url: '/index.php/News/detail',
-        			data: data,
-        			async:false,
-        			error: function(XMLHttpRequest, textStatus, errorThrown)
-        			{
-        				alert('Error loading XML document');
-        			},
-        			success: function(result)
-        			{
-        				alert(x);
-        			},
-      			});	
-  			}
 			function collect(a){
 				data = {
 					'a':a
 				};
   				$.ajax({
-        			type: 'GET',
-        			url: '/News/setCollect',
+        			type: 'POST',
+        			url: '/index.php/News/setCollect',
         			data: data,
         			async:false,
         			error: function(XMLHttpRequest, textStatus, errorThrown)
@@ -60,7 +41,23 @@
         			},
         			success: function(result)
         			{
-        				alert("data:"+result);
+        			},
+      			});
+			}
+			function cancelCollect(a){
+				data = {
+					'a':a
+				};
+  				$.ajax({
+        			type: 'POST',
+        			url: '/index.php/News/cancelCollect',
+        			data: data,
+        			async:false,
+        			error: function(XMLHttpRequest, textStatus, errorThrown)
+        			{
+        			},
+        			success: function(result)
+        			{
         			},
       			});
 			}
@@ -150,10 +147,10 @@
 		        <div class="row">
 		          <?php 
 		          if($num!=0)
-		          foreach ($show[$currentNum] as $item):?>
+		          foreach ($show as $item):?>
 		          <article class="col-md-12 article-list">
 		            <div class="inner">
-		              <figure>
+		              <figure style="height:165px;">
 			              <a href="single.html">
 			                <img src="<?php echo $item['e_eibox_image'];?>">
 		                </a>
@@ -172,11 +169,11 @@
 		                </p>
 		                <footer>
 		                	<!-- 判断数据库中某剧是否收藏 -->
-		                	<?php if ($item['e_status']==0){ ?>
-		                		<a href="#" class="love" onclick="collect(<?php echo $item['e_id']; ?>)"><i class="ion-android-favorite-outline"></i><text style="margin-left: 5px;line-height: 30px;text-align: center;">收藏</text></a>
+		                	<?php if ($item['collect']==false){ ?>
+		                		<a href="" class="love" onclick="collect(<?php echo $item['s_id']; ?>)"><i class="ion-android-favorite-outline"></i><text style="margin-left: 5px;line-height: 30px;text-align: center;">收藏</text></a>
 		                	<?php 
 		                		}else{ ?>
-		                			<a href="#" class="love active" onclick="collect(<?php echo $item['e_id']; ?>)"><i class="ion-android-favorite-outline"></i><text style="margin-left:5px;line-height: 30px;text-align: center;">收藏</text></a>
+		                			<a href="" class="love active" onclick="cancelCollect(<?php echo $item['s_id']; ?>)"><i class="ion-android-favorite"></i><text style="margin-left:5px;line-height: 30px;text-align: center;">取消收藏</text></a>
 		                	<?php } ?>
 		                	<!-- more点击事件后跳转页面问题 -->
 		                  <a class="btn btn-primary more" href="/index.php/UserController/toEpisodeIntro">
@@ -191,14 +188,14 @@
 		          <!-- 翻页码问题 -->
 		          <div class="col-md-12 text-center">
 		            <ul class="pagination">
-		              <li class="prev"><a href="#" onclick="pre()"><i class="ion-ios-arrow-left"></i></a></li>
+		              <li class="prev"><a href="/index.php/News/detail/<?php echo $day;?>/<?php echo $currentNum-1;?>"><i class="ion-ios-arrow-left"></i></a></li>
 		              	<?php for($x=1;$x<=$num;$x++){ 
 		              		if($x==$currentNum){?>
-		              			<li class="active"><a href="#" onclick="show(<?php echo $x?>)"><?php echo $x;?></a></li>
+		              			<li class="active"><a href="/index.php/News/detail/<?php echo $day;?>/<?php echo $x?>"><?php echo $x;?></a></li>
 		              		<?php }else{?>
-		              			<li><a href="#" onclick="show(<?php echo $x?>)"><?php echo $x;?></a></li>
+		              			<li><a href="/index.php/News/detail/<?php echo $day;?>/<?php echo $x?>"><?php echo $x;?></a></li>
 		              	<?php }}?>
-		              <li class="next"><a href="#" onclick="next()"><i class="ion-ios-arrow-right"></i></a></li>
+		              <li class="next"><a href="/index.php/News/detail/<?php echo $day;?>/<?php echo $currentNum+1;?>"><i class="ion-ios-arrow-right"></i></a></li>
 		            </ul>
 		            <div class="pagination-help-text">
 		            	Showing 8 results of 776 &mdash; Page 1

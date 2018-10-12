@@ -32,8 +32,8 @@
 					'page':x
 				};
   				$.ajax({
-        			type: 'GET',
-        			url: 'http://localhost:8888/index.php/News/detail',
+        			type: 'POST',
+        			url: 'http://localhost:8888/index.php/News/collect',
         			data: data,
         			async:false,
         			contentType:'application/json;charset=utf-8',
@@ -48,13 +48,14 @@
         			},
       			});	
   			}
-			function collect(a){
+			
+			function cancelCollect(a){
 				data = {
 					'a':a
 				};
   				$.ajax({
         			type: 'POST',
-        			url: 'http://localhost:8888/index.php/News/setCollect',
+        			url: '/index.php/News/cancelCollect',
         			data: data,
         			async:false,
         			error: function(XMLHttpRequest, textStatus, errorThrown)
@@ -62,7 +63,6 @@
         			},
         			success: function(result)
         			{
-        				alert("data:"+result);
         			},
       			});
 			}
@@ -145,10 +145,10 @@
 		        <div class="line"></div>
 		        <div class="row">
 		          <?php
-		          foreach ($rescentEps as $item):?>
+		          foreach ($show as $item):?>
 		          <article class="col-md-12 article-list">
 		            <div class="inner">
-		              <figure>
+		              <figure style="height:165px;">
 			              <a href="single.html">
 			                <img src="<?php echo $item['s_sibox_image'];?>">
 		                </a>
@@ -169,12 +169,12 @@
 		                	<?php echo $item['s_description'];?>
 		                </p>
 		               
-		                <div class="col-md-12" style="padding-left:0px;">
+		                <div class="col-md-12" style="padding-left:0px; height:25px;">
 		                	<span style="float:left;">进度条：</span>
 		                	<span style="float:left;">
 		                		<div class="progress" style="width:300px;">
-								<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; background-color: #ea761e;">
-									<span>50%</span>
+								<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo 100 * $item['percent']; ?>%; background-color: #ea761e;">
+									<span><?php echo floor(100 * $item['percent']); ?>%</span>
 								</div>
 							</div>
 		                	</span>
@@ -182,7 +182,7 @@
 		              
 					
 		                <footer>
-		                	<a href="#" class="love active" onclick="collect(<?php echo $item['s_id']; ?>)"><i class="ion-android-favorite-outline"></i><text style="margin-left:5px;line-height: 30px;text-align: center;">收藏</text></a>
+		                	<a href="/index.php/News/collect" class="love active" onclick="cancelCollect(<?php echo $item['s_id']; ?>)"><i class="ion-android-favorite"></i><text style="margin-left:5px;line-height: 30px;text-align: center;">取消收藏</text></a>
 		                	<!-- more点击事件后跳转页面问题 -->
 		                  <a class="btn btn-primary more" href="/index.php/UserController/toEpisodeIntro">
 		                    <div>More</div>
@@ -196,14 +196,14 @@
 		          <!-- 翻页码问题 -->
 		          <div class="col-md-12 text-center">
 		            <ul class="pagination">
-		              <li class="prev"><a href="#" onclick="pre()"><i class="ion-ios-arrow-left"></i></a></li>
+		              <li class="prev"><a href="/index.php/News/collect/<?php echo $currentNum-1;?>"><i class="ion-ios-arrow-left"></i></a></li>
 		              	<?php for($x=1;$x<=$num;$x++){ 
 		              		if($x==$currentNum){?>
-		              			<li class="active"><a href="#" onclick="show(<?php echo $x?>)"><?php echo $x;?></a></li>
+		              			<li class="active"><a href="/index.php/News/collect/<?php echo $x;?>"><?php echo $x;?></a></li>
 		              		<?php }else{?>
-		              			<li><a href="#" onclick="show(<?php echo $x?>)"><?php echo $x;?></a></li>
+		              			<li><a href="/index.php/News/collect/<?php echo $x?>"><?php echo $x;?></a></li>
 		              	<?php }}?>
-		              <li class="next"><a href="#" onclick="next()"><i class="ion-ios-arrow-right"></i></a></li>
+		              <li class="next"><a href="/index.php/News/collect/<?php echo $currentNum+1;?>"><i class="ion-ios-arrow-right"></i></a></li>
 		            </ul>
 		            <div class="pagination-help-text">
 		            	Showing 8 results of 776 &mdash; Page 1

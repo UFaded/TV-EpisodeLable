@@ -5,59 +5,14 @@ class News extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('news_model');
-        // $this->load->helper('url_helper');
     }
 
-    public function index()
+    //当日更新的集页面
+    public function detail($day = '',$currentNum=1)
     {
-        // $data['news'] = $this->news_model->get_news();
-        // $data['title'] = 'News archive';
-
-        // $this->load->view('templates/header', $data);
-        $this->load->view('news/index');
-        // $this->load->view('templates/footer');
-    }
-
-    public function view($slug = NULL)
-    {
-        // $data['news_item'] = $this->news_model->get_news($slug);
-
-        // if (empty($data['news_item']))
-        // {
-        //     show_404();
-        // }
-
-        // $data['title'] = $data['news_item']['title'];
-
-        // $this->load->view('templates/header', $data);
-        // $this->load->view('news/view', $data);
-        // $this->load->view('templates/footer');
-    }
-    public function create()
-    {
-        // $this->load->helper('form');
-        // $this->load->library('form_validation');
-
-        // $data['title'] = 'Create a news item';
-
-        // $this->form_validation->set_rules('title', 'Title', 'required');
-        // $this->form_validation->set_rules('text', 'Text', 'required');
-
-        // if ($this->form_validation->run() === false)
-        // {
-        //     $this->load->view('templates/header', $data);
-        //     $this->load->view('news/create');
-        //     $this->load->view('templates/footer');
-
-        // }
-        // else
-        // {
-        //     $this->news_model->set_news();
-        //     $this->load->view('news/success');
-        // }
-    }
-    public function detail($day = '')
-    {
+        if($currentNum<1){
+            $currentNum=1;
+        }    
         //获取当前日期，如果日期为空取今天日期
         if (empty($day)) 
         {
@@ -70,23 +25,44 @@ class News extends CI_Controller {
             $dateStart = $day;
             $dateEnd = $day;
         }
-        // 传参数据赋值
+    // 传参数据赋值
+        //返回当日更新的所有集array
         $data['news_item'] = $this->news_model->searchDates($dateStart,$dateEnd);
+        //总共页数
+        $data['num']=1;
+        //计算总共页数
+        if(count($data['news_item'])%8==0){
+            $data['num']=floor(count($data['news_item'])/8);
+        }else{
+            $data['num']=floor(count($data['news_item'])/8+1);
+        }
+        if($currentNum>$data['num']){
+            $currentNum=$data['num'];
+        }
+
+        //在数组内加入是否用户收藏相应的剧
+        foreach ($data['news_item'] as &$item) {
+            $item['collect'] = $this->news_model->judgeCollect($item['s_id'],2);
+        }
+
         $data['dateStart'] = $dateStart;
         $data['day']=$day;
         $data['d']=date("d", strtotime($day));
         $data['Y']=gmdate("Y", strtotime($day));
-        $data['currentNum']=1;
-        // $data['page']=$_POST['page'];
-        $data['num']=1;
-        $data['show']=array();
-        if(count($data['news_item'])%8==0){
-            $data['num']=count($data['news_item'])/8;
-        }else{
-            $data['num']=count($data['news_item'])/8+1;
+        //当前页数
+        $data['currentNum']=$currentNum;
+        if(isset($_POST['page'])){
+            $data['currentNum']=$_POST['page'];
         }
+
+        //根据页数来分割当前日的集数组
+        $data['episode']=array();
         for($x=1;$x<=$data['num'];$x++){
-            $data['show'][$x]=array_slice($data['news_item'],($x-1)*8,$x*8);
+            $data['episode'][$x]=array_slice($data['news_item'],($x-1)*8,$x*8);
+        }
+
+        if(isset($data['episode'][$currentNum])){
+            $data['show']=$data['episode'][$currentNum];
         }
         // 获取当前日期的英文月份
         if(gmdate("m", strtotime($day))==1){
@@ -116,35 +92,71 @@ class News extends CI_Controller {
         }
         $this->load->view('detail',$data);
     }
-    public function detailpre($slug = NULL)
-    {
-        $this->load->view('news/detail_pre');
-    }
-    public function login($slug = NULL)
-    {
-        $this->load->view('news/login.html');
-    }
-    public function register($slug = NULL)
-    {
-        $this->load->view('news/register');
-    }
+
+    //将该用户点击的剧收藏
     public function setCollect()
     {
-        $id = $_GET["a"];
-        return $id;
+        $id=$_POST['a'];
+        $bool = $this->news_model->setCollect($id,2);//后面参数为用户id
+        echo $bool;
     }
 
-    public function collect($slug=NULL){
-
-        $data['rescentEps'] = $this->news_model->searchRecentByUid(7);
+    public function cancelCollect(){
+        $id=$_POST['a'];
+        $bool = $this->news_model->cancelCollect($id,2);//后面参数为用户id
+        echo $id;   
+    }
+    //用户订阅的剧
+    public function collect($currentNum=1){
+        if($currentNum<1){
+            $currentNum=1;
+        }    
+        $data['rescentEps'] = $this->news_model->searchRecentByUid(2);//该参数为用户id
+        //总共页数
         $data['num']=1;
-        $data['show']=array();
+        //计算总共页数
         if(count($data['rescentEps'])%8==0){
-            $data['num']=count($data['rescentEps'])/8;
+            $data['num']=floor(count($data['rescentEps'])/8);
         }else{
-            $data['num']=count($data['rescentEps'])/8+1;
+            $data['num']=floor(count($data['rescentEps'])/8+1);
         }
-        $data['currentNum']=1;
+        if($currentNum>$data['num']){
+            $currentNum=$data['num'];
+        }
+
+        //当前页数
+        $data['currentNum']=$currentNum;
+        if(isset($_POST['page'])){
+            $data['currentNum']=$_POST['page'];
+        }
+
+        //在数组内加入用户观看剧的进度
+        foreach ($data['rescentEps'] as &$item) {
+            $item['percent'] = $this->news_model->getSynPercent($item['s_id'],2);//后面参数为用户id
+        }
+    
+        $data['show']=array();
+        
+         //根据页数来分割订阅的剧数组
+        $data['episode']=array();
+        for($x=1;$x<=$data['num'];$x++){
+            $data['episode'][$x]=array_slice($data['rescentEps'],($x-1)*8,$x*8);
+        }
+
+        if(isset($data['episode'][$currentNum])){
+            $data['show']=$data['episode'][$currentNum];
+        }
         $this->load->view('collect',$data);
+    }
+
+    //猜我喜欢的更多界面（根据收藏前5）
+    public function guess(){
+        $data['guessEpisodes'] = $this->news_model->guess();
+        //在数组内加入是否用户收藏相应的剧
+        foreach ($data['guessEpisodes'] as &$item) {
+            $item['collect'] = $this->news_model->judgeCollect($item['s_id'],2);
+        }
+        $this->load->view('guess',$data);
+
     }
 }
