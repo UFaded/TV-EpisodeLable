@@ -112,7 +112,7 @@
                                 <li><a href="#">生活大爆炸8</a></li>
 
                                 <div class="more" style="margin-top: 30px;text-align: center">
-                                    <a href=""><span class="">查看更多</span></a>
+                                    <a href="/index.php/News/guess"><span class="">查看更多</span></a>
                                 </div>
                             </ul>
                         </section>
